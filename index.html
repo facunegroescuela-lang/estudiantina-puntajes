@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#4c1d95">
+  <title>Estudiantina · Puntajes</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='52' font-size='52'>🏆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,700&family=Righteous&family=Lobster&family=Fredoka:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-tema="general">
+  <header class="top">
+    <a class="marca" href="#/">
+      <span class="marca-icono">✈️</span>
+      <span><b id="titulo">Estudiantina</b><small id="escuela"></small></span>
+    </a>
+    <nav id="nav">
+      <a href="#/" data-ruta="inicio">🏆 Ranking</a>
+      <a href="#/cargar" data-ruta="cargar">➕ Cargar puntos</a>
+      <a href="#/historial" data-ruta="historial">📋 Historial</a>
+      <a href="#/admin" data-ruta="admin" id="nav-admin" hidden>⚙️ Admin</a>
+    </nav>
+    <div id="sesion-top" class="sesion-top"></div>
+  </header>
+  <div id="aviso-demo" class="aviso-demo" hidden>
+    Modo demostración: los datos se guardan solo en este dispositivo. Para usarlo en la Estudiantina, completá <b>config.js</b> con los datos de Supabase.
+  </div>
+  <main id="app"><p class="cargando">Cargando…</p></main>
+  <div id="modal" class="modal" hidden><div class="modal-caja" id="modal-caja"></div></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="ciudades.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Netlify publica esta misma carpeta. No hace falta compilar nada.
+[build]
+  publish = "."
+
+# El script de la base de datos queda en GitHub pero no se muestra en la página.
+[[redirects]]
+  from = "/supabase_setup.sql"
+  to = "/index.html"
+  status = 404
+  force = true
